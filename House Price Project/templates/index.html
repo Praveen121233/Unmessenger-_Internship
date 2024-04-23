@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="body">
+        <div class='background'>
+            <div class="text1">
+                <h1> HOUSE PRICE PREDICTION</h1>
+            </div>
+        </div>
+        <div class=paragraph1>
+        </div>
+        <div id=result>
+            <p> {{pred}}</p>
+        </div>
+        <div class=paragraph2>
+        </div>
+        <div class=form>
+            <div class="register_page">
+                <div class="form">
+                    <form action="{{url_for('predict')}}" method="POST">
+                        Bedrooms <input type="number" name='bedrooms' placeholder="No of Bedrooms"><br>
+                        Bathrooms <input type="number" name='bathrooms' placeholder="Enter the no of Bathrooms"><br>
+                        Floors <input type="number" name='floors' placeholder="No of Floors"><br>
+                        <input type="submit" value="predict" class="submit">
+                    </form>
+                    <p class="price"> Predicted House Price $ {{data}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
