@@ -1,2 +1,2 @@
 # Unmessenger-_Internship
-This is my first SQL Assignment.
+My first SQL Assignment.
